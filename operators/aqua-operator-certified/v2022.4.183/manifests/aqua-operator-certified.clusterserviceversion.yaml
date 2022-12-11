@@ -460,7 +460,7 @@ spec:
                       - name: RELATED_IMAGE_DATABASE
                         value: "registry.connect.redhat.com/aquasec/database@sha256:2cb83939d45d32560b3499299c46f98d542a1f67f5378774e60c95d255a03768"
                       - name: RELATED_IMAGE_GATEWAY
-                        value: "registry.connect.redhat.com/aquasec/gateway@sha256:0a22b056f79a607ac297950b7fdf24294c8609aa089c1951db8563c1"
+                        value: "registry.connect.redhat.com/aquasec/gateway@sha256:2c9c58b90a22b056f79a607ac297950b7fdf24294c8609aa089c1951db8563c1"
                       - name: RELATED_IMAGE_SERVER
                         value: "registry.connect.redhat.com/aquasec/console@sha256:25dbdf82906aeeeae7ab3279367b4c5b9528506c3c7b9cf431b1a49923f01b85"
                       - name: RELATED_IMAGE_SCANNER
