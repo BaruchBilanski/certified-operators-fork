@@ -107,15 +107,14 @@ metadata:
             },
             "config": {
               "gateway_address": "aqua-gateway.aqua:8443",
-              "cluster_name": "aqua-secure",
-              "imagePullSecret": "aqua-registry"
+              "cluster_name": "aqua-secure"
             },
             "deploy": {
               "service": "ClusterIP"
             },
             "starboard": {
               "infra": {
-                "serviceAccount": "starboard-operator"
+                "serviceAccount": "aqua-kube-enforcer-sar"
               },
               "deploy": {
                 "replicas": 1
