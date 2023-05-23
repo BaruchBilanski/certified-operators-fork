@@ -108,7 +108,7 @@ metadata:
             "config": {
               "gateway_address": "aqua-gateway.aqua:8443",
               "cluster_name": "aqua-secure",
-              "imagePullSecret": "aqua-registry",
+              "imagePullSecret": "aqua-registry"
             },
             "deploy": {
               "service": "ClusterIP"
