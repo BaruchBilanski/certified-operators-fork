@@ -113,6 +113,14 @@ metadata:
             "deploy": {
               "service": "ClusterIP"
             },
+            "starboard": {
+              "infra": {
+                "serviceAccount": "starboard-operator"
+              },
+              "deploy": {
+                "replicas": 1
+              }
+            },
             "token": "<<KUBE_ENFORCER_GROUP_TOKEN>>"
           }
         },
