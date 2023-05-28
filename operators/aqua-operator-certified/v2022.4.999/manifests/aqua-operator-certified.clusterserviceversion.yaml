@@ -213,6 +213,61 @@ metadata:
             }
           },
           "runAsNonRoot": false
+        },
+        {
+          "apiVersion": "operator.aquasec.com/v1alpha1",
+          "kind": "AquaLightning",
+          "metadata": {
+            "name": "aqua"
+          },
+          "spec": {
+            "global": {
+              "gateway_address": "aqua-gateway.aqua:8443",
+              "cluster_name": "Default-cluster-name"
+            },
+            "common": {
+              "imagePullSecret": "aqua-registry"
+            },
+            "kubeEnforcer": {
+              "infra": {
+                "serviceAccount": "aqua-kube-enforcer-sa"
+              },
+              "token": "<<KUBE_ENFORCER_GROUP_TOKEN>>",
+              "allowAnyVersion": null,
+              "deploy": {
+                "service": "ClusterIP"
+              },
+              "starboard": {
+                "infra": {
+                  "serviceAccount": "aqua-kube-enforcer-sa"
+                },
+                "config": {
+                  "imagePullSecret": "aqua-registry"
+                },
+                "deploy": {
+                  "replicas": 1
+                }
+              },
+              "env": []
+            },
+            "enforcer": {
+              "infra": {
+                "serviceAccount": "aqua-sa",
+                "version": "2022.4"
+              },
+              "deploy": null,
+              "token": "<<ENFORCER_GROUP_TOKEN>>",
+              "env": [
+              
+              ],
+              "secret": {
+                "name": null,
+                "key": null
+              },
+              "runAsNonRoot": null,
+              "rhcosVersion": null
+            }
+          }
         }
       ]
     operators.operatorframework.io/internal-objects: '["aquastarboards.aquasecurity.github.io","configauditreports.aquasecurity.github.io", "clusterconfigauditreports.aquasecurity.github.io"]'
