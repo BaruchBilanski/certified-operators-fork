@@ -233,7 +233,6 @@ metadata:
                 "serviceAccount": "aqua-kube-enforcer-sa"
               },
               "token": "<<KUBE_ENFORCER_GROUP_TOKEN>>",
-              "allowAnyVersion": null,
               "deploy": {
                 "service": "ClusterIP"
               },
